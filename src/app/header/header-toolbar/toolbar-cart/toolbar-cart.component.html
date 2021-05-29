@@ -1,0 +1,44 @@
+<div class="cart">
+    <a href="http://localhost:4200/cart.html"></a>
+    <i class="icon-bag"></i>
+    <span class="count">{{items.length}}</span>
+    <span class="subtotal">R$289.68</span>
+    <div class="toolbar-dropdown">
+
+      <div class="dropdown-product-item" *ngFor="let item of items">
+        <span class="dropdown-product-remove">
+          <i class="icon-cross"></i>
+        </span>
+
+        <a class="dropdown-product-thumb" routerLink="/product/{{item.id}}">
+          <img src={{item.image}} alt="Product">
+        </a>
+
+        <div class="dropdown-product-info">
+          <a class="dropdown-product-title" routerLink="/product/{{item.id}}">{{item.name}}</a>
+          <span class="dropdown-product-details">1 x {{item.price | currency:'BRL':'symbol'}}</span>
+        </div>
+      </div>
+
+      <div class="toolbar-dropdown-group">
+        <div class="column">
+          <span class="text-lg">Total:</span>
+        </div>
+
+        <div class="column text-right">
+          <span class="text-lg text-medium">R$289.68&nbsp;</span>
+        </div>
+      </div>
+
+      <div class="toolbar-dropdown-group">
+        <div class="column">
+          <a class="btn btn-sm btn-block btn-secondary" href="http://localhost:4200/cart.html">Ver carrinho</a>
+        </div>
+
+        <div class="column">
+          <a class="btn btn-sm btn-block btn-success"
+            href="http://localhost:4200/checkout-address.html">Finalizar</a>
+        </div>
+      </div>
+    </div>
+  </div>

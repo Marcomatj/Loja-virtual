@@ -1,0 +1,46 @@
+<!-- Main Navigation-->
+<nav class="site-menu">
+    <ul>
+      <li class="has-megamenu active">
+        <a href="http://localhost:4200/index.html">
+          <span>Home</span>
+        </a>
+      </li>
+
+      <li>
+        <a [routerLink]="['/product/list']">
+          <span>Produtos</span>
+        </a>
+
+        <ul class="sub-menu">
+          <li>
+            <a [routerLink]="['/product/list']">Lista de produtos</a>
+          </li>
+          <li class="has-children">
+            <a href="http://localhost:4200/shop-grid-ls.html">
+              <span>Categoria</span>
+            </a>
+            <ul class="sub-menu">
+              <li>
+                <a href="http://localhost:4200/shop-grid-ls.html">Sapatos e tênis</a>
+              </li>
+              <li>
+                <a href="http://localhost:4200/shop-grid-rs.html">Óculos</a>
+              </li>
+              <li>
+                <a href="http://localhost:4200/shop-grid-ns.html">Mochilas</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+
+        <a [routerLink]="['/about']">
+          <span>Sobre</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
